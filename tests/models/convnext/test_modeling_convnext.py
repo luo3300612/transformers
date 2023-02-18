@@ -169,6 +169,7 @@ class ConvNextModelTest(ModelTesterMixin, PipelineTesterMixin, unittest.TestCase
         if is_torch_available()
         else ()
     )
+    pipieline_model_mapping = {"feature-extraction": ConvNextModel, "image-classification": ConvNextForImageClassification} if is_torch_available() else {}
 
     fx_compatible = True
     test_pruning = False
