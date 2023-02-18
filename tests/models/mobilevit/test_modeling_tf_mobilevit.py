@@ -166,7 +166,7 @@ class MobileViTModelTest(TFModelTesterMixin, PipelineTesterMixin, unittest.TestC
         if is_tf_available()
         else ()
     )
-    pipieline_model_mapping = {"feature-extraction": MobileViTModel, "image-classification": MobileViTForImageClassification, "image-segmentation": MobileViTForSemanticSegmentation} if is_torch_available() else {}
+    pipieline_model_mapping = {"feature-extraction": TFMobileViTModel, "image-classification": TFMobileViTForImageClassification, "image-segmentation": TFMobileViTForSemanticSegmentation} if is_tf_available() else {}
 
     test_pruning = False
     test_resize_embeddings = False
