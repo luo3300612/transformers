@@ -263,7 +263,7 @@ class PerceiverModelTester:
 
 
 @require_torch
-class PerceiverModelTest(ModelTesterMixin, unittest.TestCase):
+class PerceiverModelTest(ModelTesterMixin, PipelineTesterMixin, unittest.TestCase):
     all_model_classes = (
         (
             PerceiverModel,
